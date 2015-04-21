@@ -5,7 +5,7 @@ namespace HPHP {
 
 /** http://docs.hhvm.com/manual/en/function.mssql-bind.php **/
 static bool HHVM_FUNCTION(mssql_bind, const Resource& stmt, const String& param_name, const Variant& var, int64_t type,
-                      bool is_output = false, bool is_null = false, int maxlen = -1) {
+                      bool is_output = false, bool is_null = false, int64_t maxlen = -1) {
     // TODO - Implement
     return false;
 }
@@ -21,6 +21,12 @@ static Variant HHVM_FUNCTION(mssql_connect, const String& server_name, const Str
                         bool new_link /* = 0 */) {
     // TODO - Implement
     return Variant(0);
+}
+
+/** http://docs.hhvm.com/manual/en/function.mssql-data-seek.php **/
+static bool HHVM_FUNCTION(mssql_data_seek, const Resource& result_identifier, int64_t row_number) {
+    // TODO - Implement
+    return 0;
 }
 
 static class mssqlExtension : public Extension {
