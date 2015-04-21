@@ -12,3 +12,6 @@ function mssql_close(resource $link_identifier): bool;
 
 <<__Native>>
 function mssql_data_seek(resource $result_identifier, int $row_number): bool;
+
+<<__Native>>
+function mssql_execute(resource $stmt, bool $skip_results = false): mixed;

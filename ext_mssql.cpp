@@ -29,6 +29,12 @@ static bool HHVM_FUNCTION(mssql_data_seek, const Resource& result_identifier, in
     return 0;
 }
 
+/** http://docs.hhvm.com/manual/en/function.mssql-execute.php **/
+static Variant HHVM_FUNCTION(mssql_execute, const Resource& stmt, bool skip_results = false) {
+    // TODO - Implement
+    return Variant(0);
+}
+
 static class mssqlExtension : public Extension {
 public:
     mssqlExtension() : Extension("mssql") {}
@@ -38,6 +44,8 @@ public:
         HHVM_FE(mssql_bind);
         HHVM_FE(mssql_close);
         HHVM_FE(mssql_connect);
+        HHVM_FE(mssql_data_seek);
+        HHVM_FE(mssql_execute);
 
         loadSystemlib();
     }
